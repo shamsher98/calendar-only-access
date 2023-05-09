@@ -1,0 +1,9 @@
+$users = @("users email address", 
+           "mtecklenburg@xyz.com.au"
+)
+
+ 
+
+foreach($user in $users){
+    Add-MailboxFolderPermission -Identity ($user + ":\calendar") -User shamsher@xyz.com.au -AccessRights Editor
+}
